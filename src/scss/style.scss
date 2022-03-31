@@ -1,0 +1,26 @@
+@import 'base/base.scss';
+@import 'base/reset.scss';
+@import 'components/moviesPopular.component.scss';
+@import 'components/search.component.scss';
+@import 'components/movieDetail.component.scss';
+@import 'components/movieComments.components/movieComments.components.scss';
+@import 'components/movieComments.components/movieCommentsForm.component.scss';
+@import 'components/footer.scss';
+
+.body {
+    background: black;
+
+}
+::-webkit-scrollbar{
+    width: 10px;
+    background-color: #fff;
+    &-track{
+        background: #888;
+    }
+    &-thumb{
+        background: #bbb;
+        border-radius: 20px;
+    }
+    
+}
+

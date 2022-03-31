@@ -1,0 +1,92 @@
+.movieCommentsForm-edit{
+    margin-top: 2%;
+    text-align: center;
+    width: 38%;
+    @include mobile{
+        width: 100%;
+        margin-top: 5%;
+    }
+}
+.movieCommentsForm {
+    margin-top: 5%;
+    width: 50%;
+    margin-left: 5%;
+    @include mobile{
+        width: 100%;
+    }
+    
+    .movieCommentsForm-name {
+        @include roboto-regular;
+        width: 50%;
+        padding: 5px;
+        font-size: 15px;
+        border: none;
+        margin-bottom: 5px;
+        @include mobile{
+            width: 100%;
+        }
+    }
+
+    .movieCommentsForm-description {
+        @include roboto-regular;
+        width: 50%;
+        padding: 3%;
+        font-size: 15px;
+        border: none;
+        margin-bottom: 5px;
+        @include mobile{
+            width: 100%;
+        }
+    }
+
+    .movieCommentsForm-buttons {
+        display: flex;
+        width: 50%;
+        justify-content: space-between;
+        @include mobile{
+            width: 100%;
+        }
+    }
+
+    .movieCommentsForm-enviar  {
+        display: flex;
+        margin-top: 2%;
+        @include roboto-medium;
+        background-color: black;
+        border: 1px solid white;
+        border-radius: 5px;
+        padding: 10px 30px 10px 30px;
+        text-align: center;
+        transition: 0.9s;
+        @include mobile{
+            padding: 5px 15px 5px 15px;
+        }
+    }
+
+    .movieCommentsForm-enviar:hover {
+        color: black;
+        background-color: white;
+        border: 1px solid black;
+    }
+    .movieCommentsForm-cancel  {
+        display: flex;
+        color: black;
+        margin-top: 2%;
+        @include roboto-medium;
+        background-color: white;
+        border: 1px solid black;
+        border-radius: 5px;
+        padding: 10px 30px 10px 30px;
+        text-align: center;
+        transition: 0.9s;
+        @include mobile{
+            padding: 5px 15px 5px 15px;
+        }
+    }
+
+    .movieCommentsForm-cancel:hover {
+        color: white;
+        background-color: black;
+        border: 1px solid white;
+    }
+}

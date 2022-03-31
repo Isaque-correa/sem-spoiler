@@ -1,0 +1,35 @@
+.search-form {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    align-content: center;
+    width: 100%;
+    padding: 10px;
+    background: #343434;
+    position: fixed;
+    top: 0;
+    z-index: 1;
+    @include mobile{
+        padding: 4px;
+        justify-content: end;
+        
+    }
+    
+    input {
+        
+        width: 40%;
+        border-radius: 15px;
+        text-align: center;
+        font-size: 20px;
+        border: none;
+        @include mobile{
+            width: 50%;
+            font-size: 15px;
+        }
+    }
+
+    input:hover {
+        box-shadow: 0px 1px 100px 10px #fd0000;
+        transition: 0.9s;
+    }
+}

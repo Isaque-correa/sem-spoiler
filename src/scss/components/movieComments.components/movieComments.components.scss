@@ -1,0 +1,136 @@
+.movieComments {
+    color: white;
+    display: flex;
+    flex-direction: column;
+    margin-top: 10%;
+
+    @include mobile {
+        width: 100%
+    }
+
+
+    &-title {
+        @include roboto-medium;
+        text-align: center;
+        font-size: 40px;
+        width: 100%;
+        @include mobile{
+            width: 100%;
+            font-size: 2rem;
+        }
+    }
+
+    &-cover {
+        background: #242424;
+        border-radius: 20px;
+        padding: 20px;
+        width: 100%;
+        border: 1px solid white;
+
+        @include mobile {
+            width: 100%;
+            padding: 6px;
+            border-radius: 5px;
+        }
+
+    }
+
+    &-info {
+        background: rgb(0 0 0 / 30%);
+        border-radius: 20px;
+        @include mobile{
+            border-radius: 5px;
+        }
+    }
+
+    &-nome {
+        @include roboto-medium;
+        font-size: 20px;
+        padding: 10px 0px 10px 30px;
+        margin-bottom: 5px;
+
+        @include mobile {
+            font-size: 15px;
+        }
+    }
+
+    &-bottom {
+        border: 1px solid white;
+        width: 15%;
+    }
+
+    &-description {
+        display: block;
+        @include roboto-regular;
+        font-size: 15px;
+        word-break: break-all;
+        padding: 10px 30px 10px 30px;
+
+        @include mobile {
+            font-size: 10px;
+        }
+    }
+
+    &-update {
+        display: flex;
+        justify-content: flex-end;
+        margin-bottom: 1%;
+    }
+
+    &-delete {
+        @include roboto-medium;
+        color: white;
+        margin-right: 5px;
+        background-color: black;
+        text-decoration: none;
+        padding: 10px 20px 10px 20px;
+        cursor: pointer;
+        border-radius: 20px;
+        border: 1px solid white;
+        transition: 0.9s;
+        @include mobile {
+            padding: 0;
+            background: none;
+            border-radius: 0;
+            color: white;
+            border: 0;
+            border-bottom: 1px solid;
+        }
+    }
+
+    &-delete:hover {
+        background-color: white;
+        color: black;
+        border: 1px solid black;
+    }
+
+    &-edit {
+        @include roboto-medium;
+        color: black;
+        margin-left: 5px;
+        background-color: white;
+        text-decoration: none;
+        padding: 10px 20px 10px 20px;
+        cursor: pointer;
+        border-radius: 20px;
+        border: 1px solid black;
+        transition: 0.9s;
+
+        @include mobile {
+            padding: 0;
+            background: none;
+            border-radius: 0;
+            color: white;
+            border: 0;
+            border-bottom: 1px solid;
+        }
+    }
+
+    &-edit:hover {
+        background-color: black;
+        color: white;
+        border: 1px solid white;
+    }
+
+
+}

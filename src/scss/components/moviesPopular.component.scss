@@ -1,0 +1,127 @@
+.movie {
+    display: flex;
+}
+
+.movie-popular {
+
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    margin-top: 10rem;
+
+    @include mobile {
+        margin-top: 6rem;
+
+    }
+
+
+    .moviePopular {
+        position: relative;
+        margin: 2%;
+
+        @include mobile {
+            margin-bottom: 10%;
+            margin: 0;
+            width: 44%;
+            margin-left: 5px;
+            margin-right: 5px;
+            margin-bottom: 30px;
+        }
+
+        .moviePopular-cover {
+
+            img {
+                cursor: pointer;
+                object-fit: cover;
+                height: 420px;
+                width: 266px;
+                border-radius: 10px;
+
+                @include mobile {
+                    width: 100%;
+                    height: auto;
+                }
+
+            }
+
+            img:hover {
+                box-shadow: 0px 13px 40px 13px rgb(253, 0, 0);
+                transition: 0.9s;
+            }
+
+            .moviePopular-vote {
+                display: block;
+                text-align: end;
+                position: absolute;
+                top: 2%;
+                right: 2%;
+
+
+                @include mobile {
+                    width: 100%;
+                }
+
+                .tag {
+                    @include roboto-regular;
+
+                    padding: 10px;
+                    border-radius: 10px;
+                    background: #000;
+                    border: 2px solid red;
+                    color: #FFF;
+                    font-size: 10px;
+
+                    @include mobile {
+                        font-size: 10px;
+                        margin-right: 122px;
+                        border-radius: 10px;
+                        padding: 7px;
+                        margin-right: 1px;
+
+                    }
+                }
+
+                .orange {
+                    color: orange;
+                }
+
+                .green {
+                    color: #22ea22;
+                }
+
+                .red {
+                    color: red;
+                }
+            }
+
+
+        }
+    }
+
+
+    .moviePopular-info {
+        width: 100%;
+        position: absolute;
+        bottom: 10%;
+        display: flex;
+        flex-direction: column;
+        text-align: center;
+        color: #FFF;
+
+        @include mobile {
+            display: none;
+        }
+
+        h3 {
+            @include roboto-medium;
+            font-size: 20px;
+            color: #FFF;
+            padding: 10px;
+            background: rgb(158 0 0 / 50%);
+        }
+    }
+
+    .moviePopular-info:hover {
+        display: flex;
+    }
+}
