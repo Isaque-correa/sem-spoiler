@@ -1,0 +1,647 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@400;500&display=swap");
+/* http://meyerweb.com/eric/tools/css/reset/ 
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed,
+figure, figcaption, footer, header, hgroup,
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline;
+}
+
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure,
+footer, header, hgroup, menu, nav, section {
+  display: block;
+}
+
+body {
+  line-height: 1;
+}
+
+ol, ul {
+  list-style: none;
+}
+
+blockquote, q {
+  quotes: none;
+}
+
+blockquote:before, blockquote:after,
+q:before, q:after {
+  content: "";
+  content: none;
+}
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+.movie {
+  display: flex;
+}
+
+.movie-popular {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  margin-top: 10rem;
+}
+@media (min-width: 280px) and (max-width: 1000px) {
+  .movie-popular {
+    margin-top: 6rem;
+  }
+}
+.movie-popular .moviePopular {
+  position: relative;
+  margin: 2%;
+}
+@media (min-width: 280px) and (max-width: 1000px) {
+  .movie-popular .moviePopular {
+    margin-bottom: 10%;
+    margin: 0;
+    width: 44%;
+    margin-left: 5px;
+    margin-right: 5px;
+    margin-bottom: 30px;
+  }
+}
+.movie-popular .moviePopular .moviePopular-cover img {
+  cursor: pointer;
+  object-fit: cover;
+  height: 420px;
+  width: 266px;
+  border-radius: 10px;
+}
+@media (min-width: 280px) and (max-width: 1000px) {
+  .movie-popular .moviePopular .moviePopular-cover img {
+    width: 100%;
+    height: auto;
+  }
+}
+.movie-popular .moviePopular .moviePopular-cover img:hover {
+  box-shadow: 0px 13px 40px 13px #fd0000;
+  transition: 0.9s;
+}
+.movie-popular .moviePopular .moviePopular-cover .moviePopular-vote {
+  display: block;
+  text-align: end;
+  position: absolute;
+  top: 2%;
+  right: 2%;
+}
+@media (min-width: 280px) and (max-width: 1000px) {
+  .movie-popular .moviePopular .moviePopular-cover .moviePopular-vote {
+    width: 100%;
+  }
+}
+.movie-popular .moviePopular .moviePopular-cover .moviePopular-vote .tag {
+  font-family: "Roboto", sans-serif;
+  font-weight: 400;
+  padding: 10px;
+  border-radius: 10px;
+  background: #000;
+  border: 2px solid red;
+  color: #FFF;
+  font-size: 10px;
+}
+@media (min-width: 280px) and (max-width: 1000px) {
+  .movie-popular .moviePopular .moviePopular-cover .moviePopular-vote .tag {
+    font-size: 10px;
+    margin-right: 122px;
+    border-radius: 10px;
+    padding: 7px;
+    margin-right: 1px;
+  }
+}
+.movie-popular .moviePopular .moviePopular-cover .moviePopular-vote .orange {
+  color: orange;
+}
+.movie-popular .moviePopular .moviePopular-cover .moviePopular-vote .green {
+  color: #22ea22;
+}
+.movie-popular .moviePopular .moviePopular-cover .moviePopular-vote .red {
+  color: red;
+}
+.movie-popular .moviePopular-info {
+  width: 100%;
+  position: absolute;
+  bottom: 10%;
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  color: #FFF;
+}
+@media (min-width: 280px) and (max-width: 1000px) {
+  .movie-popular .moviePopular-info {
+    display: none;
+  }
+}
+.movie-popular .moviePopular-info h3 {
+  font-family: "Roboto", sans-serif;
+  font-weight: 500;
+  font-size: 20px;
+  color: #FFF;
+  padding: 10px;
+  background: rgba(158, 0, 0, 0.5);
+}
+.movie-popular .moviePopular-info:hover {
+  display: flex;
+}
+
+.search-form {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  align-content: center;
+  width: 100%;
+  padding: 10px;
+  background: #343434;
+  position: fixed;
+  top: 0;
+  z-index: 1;
+}
+@media (min-width: 280px) and (max-width: 1000px) {
+  .search-form {
+    padding: 4px;
+    justify-content: end;
+  }
+}
+.search-form input {
+  width: 40%;
+  border-radius: 15px;
+  text-align: center;
+  font-size: 20px;
+  border: none;
+}
+@media (min-width: 280px) and (max-width: 1000px) {
+  .search-form input {
+    width: 50%;
+    font-size: 15px;
+  }
+}
+.search-form input:hover {
+  box-shadow: 0px 1px 100px 10px #fd0000;
+  transition: 0.9s;
+}
+
+.movieDetail-main {
+  display: flex;
+}
+@media (min-width: 280px) and (max-width: 1000px) {
+  .movieDetail-main {
+    flex-direction: column;
+  }
+}
+.movieDetail-main .movieDetail-cover {
+  position: relative;
+  margin-top: 5px;
+}
+@media (min-width: 280px) and (max-width: 1000px) {
+  .movieDetail-main .movieDetail-cover {
+    display: flex;
+    justify-content: space-around;
+  }
+}
+.movieDetail-main .movieDetail-cover img {
+  border-radius: 20px;
+  object-fit: cover;
+  height: 740px;
+}
+@media (min-width: 280px) and (max-width: 1000px) {
+  .movieDetail-main .movieDetail-cover img {
+    width: 70%;
+    height: auto;
+  }
+}
+.movieDetail-main .movieDetail-cover .movieDetail-title {
+  color: #FFF;
+  position: absolute;
+  text-align: center;
+  top: 0;
+  right: 0;
+  left: 0px;
+  bottom: 0;
+  margin: auto;
+}
+.movieDetail-main .movieDetail-cover .movieDetail-title h2 {
+  display: none;
+  font-family: "Roboto", sans-serif;
+  font-weight: 500;
+  font-size: 5rem;
+  opacity: 0.9;
+  text-align: center;
+  height: 85vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  text-shadow: 8px 3px 3px red;
+}
+@media (min-width: 280px) and (max-width: 1000px) {
+  .movieDetail-main .movieDetail-cover .movieDetail-title h2 {
+    display: none;
+  }
+}
+.movieDetail-main .movieDetail-cover .movieDetail-vote {
+  color: #FFF;
+  position: absolute;
+  right: 1%;
+  top: 1%;
+  padding: 20px;
+  border-radius: 20px;
+  background: #000;
+  border: 2px solid red;
+}
+.movieDetail-main .movieDetail-cover .movieDetail-vote .orange {
+  color: orange;
+}
+.movieDetail-main .movieDetail-cover .movieDetail-vote .green {
+  color: #22ea22;
+}
+.movieDetail-main .movieDetail-cover .movieDetail-vote .red {
+  color: red;
+}
+@media (min-width: 280px) and (max-width: 1000px) {
+  .movieDetail-main .movieDetail-cover .movieDetail-vote {
+    padding: 10px;
+    border-radius: 10px;
+    right: 17%;
+    font-size: 10px;
+  }
+}
+.movieDetail-main .movieDetail-info {
+  color: #FFF;
+  padding-left: 3%;
+}
+@media (min-width: 280px) and (max-width: 1000px) {
+  .movieDetail-main .movieDetail-info .movieDetail-trailer {
+    margin-top: 30px;
+    width: 100%;
+    height: 40vh;
+  }
+}
+.movieDetail-main .movieDetail-info .movieDetail-description {
+  margin-top: 5%;
+  width: 70%;
+}
+@media (min-width: 280px) and (max-width: 1000px) {
+  .movieDetail-main .movieDetail-info .movieDetail-description {
+    width: 100%;
+  }
+}
+.movieDetail-main .movieDetail-info .movieDetail-description h3 {
+  font-family: "Roboto", sans-serif;
+  font-weight: 500;
+  font-size: 3rem;
+}
+@media (min-width: 280px) and (max-width: 1000px) {
+  .movieDetail-main .movieDetail-info .movieDetail-description h3 {
+    font-size: 2rem;
+  }
+}
+.movieDetail-main .movieDetail-info .movieDetail-description p {
+  font-family: "Roboto", sans-serif;
+  font-weight: 400;
+  font-size: 20px;
+  padding-top: 5%;
+}
+@media (min-width: 280px) and (max-width: 1000px) {
+  .movieDetail-main .movieDetail-info .movieDetail-description p {
+    font-size: 14px;
+  }
+}
+
+.movieDetail-voltar {
+  font-family: "Roboto", sans-serif;
+  font-weight: 500;
+  position: relative;
+  display: flex;
+  margin: 20px;
+  text-decoration: none;
+  background-color: #000;
+  color: white;
+  border-bottom: 1px solid white;
+  width: 6%;
+  transition: 0.9s;
+}
+@media (min-width: 280px) and (max-width: 1000px) {
+  .movieDetail-voltar {
+    font-size: 13px;
+    width: 18%;
+  }
+}
+
+.movieDetail-voltar:hover {
+  display: flex;
+  color: red;
+  border-bottom: 1px solid red;
+}
+
+.movieComments {
+  color: white;
+  display: flex;
+  flex-direction: column;
+  margin-top: 10%;
+}
+@media (min-width: 280px) and (max-width: 1000px) {
+  .movieComments {
+    width: 100%;
+  }
+}
+.movieComments-title {
+  font-family: "Roboto", sans-serif;
+  font-weight: 500;
+  text-align: center;
+  font-size: 40px;
+  width: 100%;
+}
+@media (min-width: 280px) and (max-width: 1000px) {
+  .movieComments-title {
+    width: 100%;
+    font-size: 2rem;
+  }
+}
+.movieComments-cover {
+  background: #242424;
+  border-radius: 20px;
+  padding: 20px;
+  width: 100%;
+  border: 1px solid white;
+}
+@media (min-width: 280px) and (max-width: 1000px) {
+  .movieComments-cover {
+    width: 100%;
+    padding: 6px;
+    border-radius: 5px;
+  }
+}
+.movieComments-info {
+  background: rgba(0, 0, 0, 0.3);
+  border-radius: 20px;
+}
+@media (min-width: 280px) and (max-width: 1000px) {
+  .movieComments-info {
+    border-radius: 5px;
+  }
+}
+.movieComments-nome {
+  font-family: "Roboto", sans-serif;
+  font-weight: 500;
+  font-size: 20px;
+  padding: 10px 0px 10px 30px;
+  margin-bottom: 5px;
+}
+@media (min-width: 280px) and (max-width: 1000px) {
+  .movieComments-nome {
+    font-size: 15px;
+  }
+}
+.movieComments-bottom {
+  border: 1px solid white;
+  width: 15%;
+}
+.movieComments-description {
+  display: block;
+  font-family: "Roboto", sans-serif;
+  font-weight: 400;
+  font-size: 15px;
+  word-break: break-all;
+  padding: 10px 30px 10px 30px;
+}
+@media (min-width: 280px) and (max-width: 1000px) {
+  .movieComments-description {
+    font-size: 10px;
+  }
+}
+.movieComments-update {
+  display: flex;
+  justify-content: flex-end;
+  margin-bottom: 1%;
+}
+.movieComments-delete {
+  font-family: "Roboto", sans-serif;
+  font-weight: 500;
+  color: white;
+  margin-right: 5px;
+  background-color: black;
+  text-decoration: none;
+  padding: 10px 20px 10px 20px;
+  cursor: pointer;
+  border-radius: 20px;
+  border: 1px solid white;
+  transition: 0.9s;
+}
+@media (min-width: 280px) and (max-width: 1000px) {
+  .movieComments-delete {
+    padding: 0;
+    background: none;
+    border-radius: 0;
+    color: white;
+    border: 0;
+    border-bottom: 1px solid;
+  }
+}
+.movieComments-delete:hover {
+  background-color: white;
+  color: black;
+  border: 1px solid black;
+}
+.movieComments-edit {
+  font-family: "Roboto", sans-serif;
+  font-weight: 500;
+  color: black;
+  margin-left: 5px;
+  background-color: white;
+  text-decoration: none;
+  padding: 10px 20px 10px 20px;
+  cursor: pointer;
+  border-radius: 20px;
+  border: 1px solid black;
+  transition: 0.9s;
+}
+@media (min-width: 280px) and (max-width: 1000px) {
+  .movieComments-edit {
+    padding: 0;
+    background: none;
+    border-radius: 0;
+    color: white;
+    border: 0;
+    border-bottom: 1px solid;
+  }
+}
+.movieComments-edit:hover {
+  background-color: black;
+  color: white;
+  border: 1px solid white;
+}
+
+.movieCommentsForm-edit {
+  margin-top: 2%;
+  text-align: center;
+  width: 38%;
+}
+@media (min-width: 280px) and (max-width: 1000px) {
+  .movieCommentsForm-edit {
+    width: 100%;
+    margin-top: 5%;
+  }
+}
+
+.movieCommentsForm {
+  margin-top: 5%;
+  width: 50%;
+  margin-left: 5%;
+}
+@media (min-width: 280px) and (max-width: 1000px) {
+  .movieCommentsForm {
+    width: 100%;
+  }
+}
+.movieCommentsForm .movieCommentsForm-name {
+  font-family: "Roboto", sans-serif;
+  font-weight: 400;
+  width: 50%;
+  padding: 5px;
+  font-size: 15px;
+  border: none;
+  margin-bottom: 5px;
+}
+@media (min-width: 280px) and (max-width: 1000px) {
+  .movieCommentsForm .movieCommentsForm-name {
+    width: 100%;
+  }
+}
+.movieCommentsForm .movieCommentsForm-description {
+  font-family: "Roboto", sans-serif;
+  font-weight: 400;
+  width: 50%;
+  padding: 3%;
+  font-size: 15px;
+  border: none;
+  margin-bottom: 5px;
+}
+@media (min-width: 280px) and (max-width: 1000px) {
+  .movieCommentsForm .movieCommentsForm-description {
+    width: 100%;
+  }
+}
+.movieCommentsForm .movieCommentsForm-buttons {
+  display: flex;
+  width: 50%;
+  justify-content: space-between;
+}
+@media (min-width: 280px) and (max-width: 1000px) {
+  .movieCommentsForm .movieCommentsForm-buttons {
+    width: 100%;
+  }
+}
+.movieCommentsForm .movieCommentsForm-enviar {
+  display: flex;
+  margin-top: 2%;
+  font-family: "Roboto", sans-serif;
+  font-weight: 500;
+  background-color: black;
+  border: 1px solid white;
+  border-radius: 5px;
+  padding: 10px 30px 10px 30px;
+  text-align: center;
+  transition: 0.9s;
+}
+@media (min-width: 280px) and (max-width: 1000px) {
+  .movieCommentsForm .movieCommentsForm-enviar {
+    padding: 5px 15px 5px 15px;
+  }
+}
+.movieCommentsForm .movieCommentsForm-enviar:hover {
+  color: black;
+  background-color: white;
+  border: 1px solid black;
+}
+.movieCommentsForm .movieCommentsForm-cancel {
+  display: flex;
+  color: black;
+  margin-top: 2%;
+  font-family: "Roboto", sans-serif;
+  font-weight: 500;
+  background-color: white;
+  border: 1px solid black;
+  border-radius: 5px;
+  padding: 10px 30px 10px 30px;
+  text-align: center;
+  transition: 0.9s;
+}
+@media (min-width: 280px) and (max-width: 1000px) {
+  .movieCommentsForm .movieCommentsForm-cancel {
+    padding: 5px 15px 5px 15px;
+  }
+}
+.movieCommentsForm .movieCommentsForm-cancel:hover {
+  color: white;
+  background-color: black;
+  border: 1px solid white;
+}
+
+.movieLogo {
+  position: fixed;
+  z-index: 2;
+  text-align: center;
+  width: 30%;
+}
+@media (min-width: 280px) and (max-width: 1000px) {
+  .movieLogo {
+    width: 50%;
+  }
+}
+.movieLogo .movieLogo-title {
+  font-family: "Roboto", sans-serif;
+  font-weight: 500;
+  cursor: pointer;
+  color: #FFF;
+  font-size: 30px;
+  margin-left: 7%;
+  text-shadow: -2px -2px red;
+  transition: 0.9s;
+}
+@media (min-width: 280px) and (max-width: 1000px) {
+  .movieLogo .movieLogo-title {
+    font-size: 16px;
+  }
+}
+.movieLogo .movieLogo-title:hover {
+  color: red;
+  text-shadow: -2px -2px white;
+}
+
+.body {
+  background: black;
+}
+
+::-webkit-scrollbar {
+  width: 10px;
+  background-color: #fff;
+}
+::-webkit-scrollbar-track {
+  background: #888;
+}
+::-webkit-scrollbar-thumb {
+  background: #bbb;
+  border-radius: 20px;
+}
+
+/*# sourceMappingURL=style.css.map */
