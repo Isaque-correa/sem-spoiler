@@ -10,7 +10,7 @@ function HomePage(){
     <div>  
         <Router>
             <Routes>
-                <Route path="/" element={<MoviesComponent category="popular"/>}/>
+                <Route path="/sem-spoiler" element={<MoviesComponent category="popular"/>}/>
                 <Route path="movie/:id" element={<MovieDetail />}/>
             </Routes>
         </Router>

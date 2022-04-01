@@ -35,7 +35,7 @@ function MovieDetail() {
   if (movie) {
     return (
       <div className="container">
-          <Link to={`/`} className="movieDetail-voltar">VOLTAR</Link>
+          <Link to={`/sem-spoiler`} className="movieDetail-voltar">VOLTAR</Link>
         <div className="movieDetail-main">
           <div className="movieDetail-cover">
             <img
