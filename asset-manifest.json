@@ -1,13 +1,13 @@
 {
   "files": {
     "main.css": "/sem-spoiler/static/css/main.1a8a0596.css",
-    "main.js": "/sem-spoiler/static/js/main.76f00a03.js",
+    "main.js": "/sem-spoiler/static/js/main.eb06ba2d.js",
     "index.html": "/sem-spoiler/index.html",
     "main.1a8a0596.css.map": "/sem-spoiler/static/css/main.1a8a0596.css.map",
-    "main.76f00a03.js.map": "/sem-spoiler/static/js/main.76f00a03.js.map"
+    "main.eb06ba2d.js.map": "/sem-spoiler/static/js/main.eb06ba2d.js.map"
   },
   "entrypoints": [
     "static/css/main.1a8a0596.css",
-    "static/js/main.76f00a03.js"
+    "static/js/main.eb06ba2d.js"
   ]
 }
