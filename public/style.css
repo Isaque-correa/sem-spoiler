@@ -201,6 +201,37 @@ table {
   transition: 0.9s;
 }
 
+.movieLogo {
+  position: fixed;
+  z-index: 2;
+  text-align: center;
+  width: 30%;
+}
+@media (min-width: 280px) and (max-width: 1000px) {
+  .movieLogo {
+    width: 50%;
+  }
+}
+.movieLogo .movieLogo-title {
+  font-family: "Roboto", sans-serif;
+  font-weight: 500;
+  cursor: pointer;
+  color: #FFF;
+  font-size: 30px;
+  margin-left: 7%;
+  text-shadow: -2px -2px red;
+  transition: 0.9s;
+}
+@media (min-width: 280px) and (max-width: 1000px) {
+  .movieLogo .movieLogo-title {
+    font-size: 16px;
+  }
+}
+.movieLogo .movieLogo-title:hover {
+  color: red;
+  text-shadow: -2px -2px white;
+}
+
 .movieDetail-main {
   display: flex;
 }
@@ -597,35 +628,20 @@ table {
   border: 1px solid white;
 }
 
-.movieLogo {
-  position: fixed;
-  z-index: 2;
-  text-align: center;
-  width: 30%;
+.footer {
+  color: #FFF;
+  margin-bottom: 0;
+  margin-top: 20px;
 }
-@media (min-width: 280px) and (max-width: 1000px) {
-  .movieLogo {
-    width: 50%;
-  }
+.footer-cover {
+  background-color: #343434;
+  padding: 10px;
 }
-.movieLogo .movieLogo-title {
+.footer-cover p {
   font-family: "Roboto", sans-serif;
   font-weight: 500;
-  cursor: pointer;
-  color: #FFF;
-  font-size: 30px;
-  margin-left: 7%;
-  text-shadow: -2px -2px red;
-  transition: 0.9s;
-}
-@media (min-width: 280px) and (max-width: 1000px) {
-  .movieLogo .movieLogo-title {
-    font-size: 16px;
-  }
-}
-.movieLogo .movieLogo-title:hover {
-  color: red;
-  text-shadow: -2px -2px white;
+  text-align: center;
+  margin-bottom: 0;
 }
 
 .body {

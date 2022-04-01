@@ -2,7 +2,7 @@ import { getMovieAsync, getSearchAsync } from "../services/films.service";
 import React, { useEffect, useState } from "react";
 import Search from "./search.component";
 import MoviesPopular from "./moviesPopular.component";
-import Footer from "./movieFooter.component";
+
 
 function MoviesComponent(props) {
   const [movies, setMovies] = useState([]);
@@ -49,7 +49,6 @@ function MoviesComponent(props) {
           </div>
         </div>
       </div>
-        
     </div>
   );
 }
