@@ -1,6 +1,8 @@
 # Sem Spoiler
 link da homepage: https://isaque-correa.github.io/sem-spoiler/
+
 Sem spoiler é um site de sinopse, que foi trabalhado utilizando a API do site the movie database, futuramente acrescentarei mais coisas na pagina inicial, pois a pagina inicial é apenas os filmes populares. Além de usar as API com os endereço de popular, search e o Id, na parte onde tem os detalhes do filmes temos um CRUD como comentários.
+
   As tecnologias usadas para esse projeto foram, Reactjs, routers, axios, scss, um pouco do bootstrap e API do youtube para gerar os trailer.
 
 
